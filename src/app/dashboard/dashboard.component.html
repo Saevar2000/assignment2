@@ -14,14 +14,16 @@
         <input matInput placeholder="Edit" [(ngModel)]="mission.Detail">
       </mat-form-field>
 
-      <mat-form-field>
-        <mat-select [(ngModel)]="mission.Status">
-          <mat-option>-- None --</mat-option>
-          <mat-option value="Finished">Finished</mat-option>
-          <mat-option value="Denied">Denied</mat-option>
-          <mat-option value="Pending">Pending</mat-option>
-        </mat-select>
-      </mat-form-field>
+      <div align="right">
+        <mat-form-field>
+          <mat-select [(ngModel)]="mission.Status">
+            <mat-option>-- None --</mat-option>
+            <mat-option value="Finished">Finished</mat-option>
+            <mat-option value="Pending">Pending</mat-option>
+            <mat-option value="Denied">Denied</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
     </div>
   </mat-expansion-panel>
 </mat-accordion>

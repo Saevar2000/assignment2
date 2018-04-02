@@ -22,15 +22,4 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.missions = this.missionService.missions;
   }
-
-  deny(id: number): void {
-    this.missions[id].Status = "Denied";
-  }
-
-  accept(id: number): void {
-    this.missions[id].Status = "Done";
-    console.log(id);
-    console.log(this.missions[id].Status);
-  }
-
 }
