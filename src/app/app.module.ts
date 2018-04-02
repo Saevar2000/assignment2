@@ -1,27 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatToolbarModule, MatSidenavModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatToolbarModule, MatSidenavModule, MatCardModule, MatDialogModule, MatListModule, MatRippleModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    ToolbarComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatIconModule,
-    MatMenuModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatCardModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatListModule,
+    MatRippleModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

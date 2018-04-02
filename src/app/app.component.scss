@@ -1,0 +1,12 @@
+.mat-drawer {
+  min-width: 216px;
+  max-width: 216px;
+}
+.mat-drawer-content {
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0;
+  height: 100vh;
+}

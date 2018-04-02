@@ -1,2 +1,12 @@
-<app-navbar></app-navbar>
+<app-toolbar (menuClick)="focusDrawer.toggle()"></app-toolbar>
 
+<mat-drawer-container>
+    <mat-drawer #focusDrawer opened mode="side" class="mat-elevation-z7">
+        <app-navigation></app-navigation>
+    </mat-drawer>
+    <h1>My Content</h1>
+    <mat-drawer-content>
+        <h1>asdf</h1>
+        
+    </mat-drawer-content>
+</mat-drawer-container>

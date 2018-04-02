@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="onMenuClick()" name="Side bar">
+      <mat-icon>menu</mat-icon>
+  </button>
+  <span class="title" routerLink="home">rickenator</span>
+  <span class="spacer"></span>
+  <button [matMenuTriggerFor]="menu" mat-button name="Account">
+      <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+      <ng-template matMenuContent>
+          <button mat-menu-item routerLink="login">Log in</button>
+          <button mat-menu-item (click)="logout()">Log out</button>
+      </ng-template>
+  </mat-menu>
+</mat-toolbar>
