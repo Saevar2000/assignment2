@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatToolbarModule, MatSidenavModule, MatCardModule, MatDialogModule, MatListModule, MatRippleModule, MatExpansionModule, MatFormFieldModule, MatFormFieldControl, MatInputModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatToolbarModule, MatSidenavModule, MatCardModule, MatDialogModule, MatListModule, MatRippleModule, MatExpansionModule, MatFormFieldModule, MatFormFieldControl, MatInputModule, MatProgressSpinnerModule, MatOptionModule, MatSelectModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 
@@ -14,7 +14,7 @@ import { MissionService } from './services/mission.service';
 import { AuthService } from './services/auth.service';
 import { DbService } from './services/db.service';
 import { AuthGuard } from './guard/auth.guard';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
@@ -32,6 +32,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
@@ -46,6 +47,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatOptionModule,
+    MatSelectModule,
     ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),

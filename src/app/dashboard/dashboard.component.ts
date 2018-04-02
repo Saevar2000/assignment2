@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Mission } from '../../models/mission';
 import { MISSIONS } from '../../mock-data/mock-missions';
 import { MissionService } from '../services/mission.service';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -11,10 +12,25 @@ import { MissionService } from '../services/mission.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private missionService: MissionService) { }
+  missions: Mission[];
+
+  constructor(
+    private missionService: MissionService,
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
-    
+    this.missions = this.missionService.missions;
+  }
+
+  deny(id: number): void {
+    this.missions[id].Status = "Denied";
+  }
+
+  accept(id: number): void {
+    this.missions[id].Status = "Done";
+    console.log(id);
+    console.log(this.missions[id].Status);
   }
 
 }
