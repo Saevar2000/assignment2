@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,8 +11,7 @@ export class ToolbarComponent implements OnInit {
   @Output()
   menuClick: EventEmitter<any> = new EventEmitter();
 
-
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -20,4 +20,7 @@ export class ToolbarComponent implements OnInit {
     this.menuClick.emit();
   }
 
+  logout(): void {
+    this.authService.logout();
+  }
 }

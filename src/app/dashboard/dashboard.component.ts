@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Mission } from '../../models/mission';
 import { MISSIONS } from '../../mock-data/mock-missions';
-import { MissionService } from '../mission.service';
+import { MissionService } from '../services/mission.service';
+
 
 @Component({
   selector: 'app-dashboard',
