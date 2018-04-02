@@ -1,0 +1,13 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let mission of missionService.missions">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{mission.Threat}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{mission.Status}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    {{mission.Detail}}
+  </mat-expansion-panel>
+</mat-accordion>
