@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { SendMissionComponent } from './send-mission/send-mission.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     ToolbarComponent,
     NavigationComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    SendMissionComponent
   ],
   imports: [
     BrowserModule,

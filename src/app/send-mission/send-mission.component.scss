@@ -1,0 +1,8 @@
+.contain {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.contain > * {
+    width: 100%;
+}
