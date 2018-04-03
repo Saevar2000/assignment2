@@ -16,7 +16,7 @@ export class SendMissionComponent implements OnInit {
   mission: Mission;
 
   constructor(
-    private authService: AuthService, 
+    public authService: AuthService, 
     private missionService: MissionService
   ) { }
 
